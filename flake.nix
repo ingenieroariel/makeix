@@ -185,6 +185,12 @@ distclean: clean zipclean
               for source in $buildInputs; do
                 cp -R $source $out/
               done
+	      cp -R $out/*superconfigure/* $out/
+	      mkdir $out/cosmopolitan
+	      cp -R $out/*cosmopolitan/* $out/cosmopolitan
+	      mkdir -p $out/cosmopolitan/.cosmocc/3.8
+	      cp -R $out/*cosmocc/* $out/cosmopolitan/.cosmocc/3.8/
+	      rm -rf $out/Makefile
 	      cp ${makefile} $out/Makefile
             '';
           };
@@ -198,8 +204,8 @@ distclean: clean zipclean
 	    patchPhase = ''
 	    '';
             buildPhase = ''
-	      cd arcan-sources
-	      touch ariel
+	      #cd arcan-sources
+	      make clean
 	    '';
             installPhase = ''
               # Your install instructions go here
