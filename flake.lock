@@ -123,19 +123,6 @@
         "url": "https://ftp.gnu.org/gnu/coreutils/coreutils-9.4.tar.gz"
       }
     },
-    "cosmocc": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1725073105,
-        "narHash": "sha256-5X9p7A6tNJmPHEh1pF57C3AL326EBemsuGAFyU8lU0U=",
-        "type": "tarball",
-        "url": "https://github.com/jart/cosmopolitan/releases/download/3.8.0/cosmocc-3.8.0.zip"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://github.com/jart/cosmopolitan/releases/download/3.8.0/cosmocc-3.8.0.zip"
-      }
-    },
     "cosmopolitan": {
       "flake": false,
       "locked": {
@@ -895,7 +882,6 @@
         "brotli": "brotli",
         "cat9": "cat9",
         "coreutils": "coreutils",
-        "cosmocc": "cosmocc",
         "cosmopolitan": "cosmopolitan",
         "cups": "cups",
         "diffutils": "diffutils",

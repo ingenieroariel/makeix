@@ -2,7 +2,6 @@
   description = "A simple script";
   inputs = {
     superconfigure = { url="github:ahgamut/superconfigure"; flake=false; };
-    cosmocc = { url="https://github.com/jart/cosmopolitan/releases/download/3.8.0/cosmocc-3.8.0.zip"; flake=false; };
     cosmopolitan = { url = "github:jart/cosmopolitan"; flake=false; };
     arcan = { url = "github:letoram/arcan"; flake=false; };
     durden = { url = "github:letoram/durden"; flake=false; };
@@ -115,7 +114,7 @@ export COSMOS_AARCH64:=$(BASELOC)/cosmos/aarch64
 export RESULTS:=$(BASELOC)/results
 export ZIPCOPY:=$(COSMO)/o/tool/build/zipcopy
 export APELINK:=$(COSMO)/o/tool/build/apelink
-
+export PKG_CONFIG_PATH_FOR_TARGET:=$(PKG_CONFIG_PATH_FOR_TARGET):$(COSMOS_AARCH64)/share/pkgconfig:$(COSMOS_AARCH64)/lib/pkgconfig
 # basic functions
 include config/common.mk
 include config/functions.mk
@@ -173,7 +172,7 @@ distclean: clean zipclean
           sourceDrvs = mkSourceDrvs system;
         in {
           sources = pkgs.stdenv.mkDerivation {
-            name = "arcan-sources";
+            name = "src";
             # No src attribute, as we're creating our own source directory
             buildInputs = builtins.attrValues sourceDrvs;
             buildPhase = ''
@@ -188,10 +187,12 @@ distclean: clean zipclean
 	      cp -R $out/*superconfigure/* $out/
 	      mkdir $out/cosmopolitan
 	      cp -R $out/*cosmopolitan/* $out/cosmopolitan
-	      mkdir -p $out/cosmopolitan/.cosmocc/3.8
-	      cp -R $out/*cosmocc/* $out/cosmopolitan/.cosmocc/3.8/
+	      rm -rf $out/cosmopolitan/cosmocc
+	      ln -s $out/cosmopolitan/.cosmocc/3.8.0 $out/cosmopolitan/cosmocc
 	      rm -rf $out/Makefile
 	      cp ${makefile} $out/Makefile
+	      mkdir -p $out/cosmos/x86_64/{lib,include,share,lib64}
+	      mkdir -p $out/cosmos/aarch64/{lib,include,share,lib64}
             '';
           };
 
@@ -199,19 +200,34 @@ distclean: clean zipclean
             name = "arcan";
             src = self.packages.${system}.sources;
 	    NIX_DEBUG=3;
-	    unpackPhase = ''
-	    '';
-	    patchPhase = ''
-	    '';
-            buildPhase = ''
-	      #cd arcan-sources
-	      make clean
+	    buildInputs = with pkgs; [
+	      autoconf
+	      automake
+	      texinfo
+	      openssl
+	      bison
+	      m4
+	      ninja
+	      cmake
+	      pkg-config
+	      bc
+	      cpio
+	      file
+	      perl
+	      wget
+	      rsync
+	      unzip
+	      util-linux
+	      which
+	    ];
+           buildPhase = ''
+	       ./cosmopolitan/build/bootstrap/make o/gui/SDL2/installed.aarch64
 	    '';
             installPhase = ''
               # Your install instructions go here
 	      mkdir -p $out/bin
-	      touch $out/bin/hello
-	      chmod +x $out/bin/hello
+	      cp -R cosmos/bin/* $out/bin/
+	      chmod +x $out/bin/*
             '';
           };
         }
