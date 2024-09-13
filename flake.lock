@@ -29,15 +29,16 @@
     "arcan": {
       "flake": false,
       "locked": {
-        "lastModified": 1725493484,
-        "narHash": "sha256-idCGa3kapWj3HNGIany6/BfTSo6vuNrRQOa35BQmNH4=",
-        "owner": "letoram",
+        "lastModified": 1726247374,
+        "narHash": "sha256-vIL1TelINTjMl/0OC+OlHc3fbA4FoeshjWCFSC4bJkQ=",
+        "owner": "ingenieroariel",
         "repo": "arcan",
-        "rev": "433241c22489bf862742053a5c869439a65bc5ef",
+        "rev": "adc6c7207a171adcb674bc06e6b109f780b73742",
         "type": "github"
       },
       "original": {
-        "owner": "letoram",
+        "owner": "ingenieroariel",
+        "ref": "arcanflake",
         "repo": "arcan",
         "type": "github"
       }
@@ -97,11 +98,11 @@
     "cat9": {
       "flake": false,
       "locked": {
-        "lastModified": 1725841280,
-        "narHash": "sha256-Kyj3CXRtG2UOt3fZ/XiOOzBdNCwvfbYj5zk27EgjN1M=",
+        "lastModified": 1726186572,
+        "narHash": "sha256-pv1fbs/B7V9P7i30DtDW4lvnUd1AWtMW/yiMWKfXYds=",
         "owner": "letoram",
         "repo": "cat9",
-        "rev": "43c1f700916992950f63ca01332dcb8f5a918a07",
+        "rev": "e8d8f04d249d79d44f1c7b6f950906d0ef8d7d2f",
         "type": "github"
       },
       "original": {
@@ -126,11 +127,11 @@
     "cosmopolitan": {
       "flake": false,
       "locked": {
-        "lastModified": 1726140218,
-        "narHash": "sha256-OQLyRLl0yFhVY0UAKWbOsVKFcQtr491SyIIrmEa8QC0=",
+        "lastModified": 1726233927,
+        "narHash": "sha256-gS4gfdg/vqqMU+5ZRD6Ad9kuFgzCX2R8myo4dpyje/E=",
         "owner": "jart",
         "repo": "cosmopolitan",
-        "rev": "acd6c321843f81b1d380b656b7457c77541d857d",
+        "rev": "462ba6909e3a39053a817bdc013d4b38a79cfd2a",
         "type": "github"
       },
       "original": {
@@ -548,14 +549,17 @@
     "libtiff": {
       "flake": false,
       "locked": {
-        "lastModified": 1694164355,
-        "narHash": "sha256-qCg5qjsPPynCHIg0JsPJldwVdcYkI68zYmyNAKUCoyw=",
-        "type": "tarball",
-        "url": "https://gitlab.com/libtiff/libtiff/-/archive/v4.6.0/libtiff-v4.6.0.tar.gz"
+        "lastModified": 1725634697,
+        "narHash": "sha256-1qZjcE+HP/3HQux/BIr3mz2t/jsB8V76RArNtFcNo4Y=",
+        "owner": "libsdl-org",
+        "repo": "libtiff",
+        "rev": "6589e863d8ebe8bb839f06b46f4c4632a0655d9b",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://gitlab.com/libtiff/libtiff/-/archive/v4.6.0/libtiff-v4.6.0.tar.gz"
+        "owner": "libsdl-org",
+        "repo": "libtiff",
+        "type": "github"
       }
     },
     "libunistring": {
@@ -781,11 +785,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1726042813,
-        "narHash": "sha256-LnNKCCxnwgF+575y0pxUdlGZBO/ru1CtGHIqQVfvjlA=",
+        "lastModified": 1726142289,
+        "narHash": "sha256-Jks8O42La+nm5AMTSq/PvM5O+fUAhIy0Ce1QYqLkyZ4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "159be5db480d1df880a0135ca0bfed84c2f88353",
+        "rev": "280db3decab4cbeb22a4599bd472229ab74d25e1",
         "type": "github"
       },
       "original": {
@@ -982,11 +986,11 @@
     "superconfigure": {
       "flake": false,
       "locked": {
-        "lastModified": 1726146151,
-        "narHash": "sha256-fiiQ03/ZM25yl8gGa4AsOsPjy3bQ9VnRV3DgU6q0xkQ=",
+        "lastModified": 1726258601,
+        "narHash": "sha256-rLYajTyaiIazsylrB3M1HBBVtWUXOP2UdrUkv9Npmjo=",
         "owner": "ingenieroariel",
         "repo": "superconfigure",
-        "rev": "c49c58de5b0d951d4e9565ce5ab2f5ae8f4b4c71",
+        "rev": "70ba1ae562929c52b9040fc65164dc725e422850",
         "type": "github"
       },
       "original": {

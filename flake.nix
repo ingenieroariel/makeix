@@ -1,5 +1,5 @@
 {
-  description = "A simple script";
+  description = "Static graphical userland using Nix, Cosmopolitan Libc and Arcan Engine. makeix.com";
   inputs = {
     superconfigure = { url="github:ingenieroariel/superconfigure/arcanflake"; flake=false; };
     cosmopolitan = { url = "github:jart/cosmopolitan"; flake=false; };
@@ -222,12 +222,13 @@ distclean: clean zipclean
 	      which
 	    ];
            buildPhase = ''
-	       ./cosmopolitan/build/bootstrap/make o/gui/SDL2/installed.aarch64
+	       # Currently failing on linking, but useful to run manually
+	       ./cosmopolitan/build/bootstrap/make o/gui/arcan/installed.aarch64
 	    '';
             installPhase = ''
-              # Your install instructions go here
-	      mkdir -p $out/bin
-	      cp -R cosmos/bin/* $out/bin/
+	      cp o/gui/arcan/arcan_db -p $out/bin
+	      cp o/gui/arcan/arcan_frameserver -p $out/bin
+	      cp o/gui/arcan/arcan -p $out/bin
 	      chmod +x $out/bin/*
             '';
           };
@@ -235,4 +236,3 @@ distclean: clean zipclean
       );
   };
 }
-
