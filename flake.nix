@@ -105,6 +105,7 @@
       mkSourceDrvs = system: nixpkgs.lib.mapAttrs (mkSource system) 
         (builtins.removeAttrs inputs [ "self" "nixpkgs" ]);
       makefile = builtins.toFile "Makefile" ''
+export MAXPROC:=20
 export SHELL:=bash
 export BASELOC:=$(shell pwd)
 export COSMO:=$(BASELOC)/cosmopolitan
