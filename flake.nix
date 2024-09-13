@@ -1,9 +1,9 @@
 {
   description = "A simple script";
   inputs = {
-    superconfigure = { url="github:ahgamut/superconfigure"; flake=false; };
+    superconfigure = { url="github:ingenieroariel/superconfigure/arcanflake"; flake=false; };
     cosmopolitan = { url = "github:jart/cosmopolitan"; flake=false; };
-    arcan = { url = "github:letoram/arcan"; flake=false; };
+    arcan = { url = "github:ingenieroariel/arcan/arcanflake"; flake=false; };
     durden = { url = "github:letoram/durden"; flake=false; };
     cat9 = { url = "github:letoram/cat9"; flake=false; };
     bash = { url = "https://ftp.gnu.org/gnu/bash/bash-5.2.tar.gz"; flake = false; };
@@ -63,7 +63,7 @@
     libogg = { url = "https://downloads.xiph.org/releases/ogg/libogg-1.3.5.tar.xz"; flake = false; };
     libpng = { url = "https://download.sourceforge.net/libpng/libpng-1.6.43.tar.gz"; flake = false; };
     libssh2 = { url = "https://github.com/libssh2/libssh2/releases/download/libssh2-1.11.0/libssh2-1.11.0.tar.gz"; flake = false; };
-    libtiff = { url = "https://gitlab.com/libtiff/libtiff/-/archive/v4.6.0/libtiff-v4.6.0.tar.gz"; flake = false; };
+    libtiff = { url = "github:libsdl-org/libtiff"; flake = false; };
     libunistring = { url = "https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.gz"; flake = false; };
     libuuid = { url = "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz"; flake = false; };
     libvorbis = { url = "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz"; flake = false; };
@@ -191,8 +191,8 @@ distclean: clean zipclean
 	      ln -s $out/cosmopolitan/.cosmocc/3.8.0 $out/cosmopolitan/cosmocc
 	      rm -rf $out/Makefile
 	      cp ${makefile} $out/Makefile
-	      mkdir -p $out/cosmos/x86_64/{lib,include,share,lib64}
-	      mkdir -p $out/cosmos/aarch64/{lib,include,share,lib64}
+	      mkdir -p $out/cosmos/x86_64/{lib,include,share,lib64,bin}
+	      mkdir -p $out/cosmos/aarch64/{lib,include,share,lib64,bin}
             '';
           };
 
