@@ -127,11 +127,11 @@
     "cosmopolitan": {
       "flake": false,
       "locked": {
-        "lastModified": 1726233927,
-        "narHash": "sha256-gS4gfdg/vqqMU+5ZRD6Ad9kuFgzCX2R8myo4dpyje/E=",
+        "lastModified": 1726566907,
+        "narHash": "sha256-mILvfrYY/tfeYmp7Y3mFncZrKSFGifnEkU/zbl5GWhY=",
         "owner": "jart",
         "repo": "cosmopolitan",
-        "rev": "462ba6909e3a39053a817bdc013d4b38a79cfd2a",
+        "rev": "aaed879ec73036d5c14222b99811d95f62a9abc9",
         "type": "github"
       },
       "original": {
@@ -986,11 +986,11 @@
     "superconfigure": {
       "flake": false,
       "locked": {
-        "lastModified": 1726258601,
-        "narHash": "sha256-rLYajTyaiIazsylrB3M1HBBVtWUXOP2UdrUkv9Npmjo=",
+        "lastModified": 1726590509,
+        "narHash": "sha256-laptzHuK0xTKuG9Ka8R7ejHQNJuqf3w5zoscp8Vhlx0=",
         "owner": "ingenieroariel",
         "repo": "superconfigure",
-        "rev": "70ba1ae562929c52b9040fc65164dc725e422850",
+        "rev": "73669cf89de58ba5d5de300457f3fd6a9c87e263",
         "type": "github"
       },
       "original": {
