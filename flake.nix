@@ -223,7 +223,7 @@ distclean: clean zipclean
 	    ];
            buildPhase = ''
 	       # Currently failing on linking, but useful to run manually
-	       ./cosmopolitan/build/bootstrap/make o/gui/arcan/installed.aarch64
+	       ./cosmopolitan/build/bootstrap/make o/gui/arcan/fat.built
 	    '';
             installPhase = ''
 	      cp o/gui/arcan/arcan_db -p $out/bin
