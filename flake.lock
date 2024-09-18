@@ -986,11 +986,11 @@
     "superconfigure": {
       "flake": false,
       "locked": {
-        "lastModified": 1726611191,
-        "narHash": "sha256-0X0XzYB8ha+MfJ5FjNmnu0Fka/g/SsQEf/sviS2brcM=",
+        "lastModified": 1726671481,
+        "narHash": "sha256-ZgaF7OHiFrGPQSpIE8v7TbROwYIltR67cw0IQ1/Wmz4=",
         "owner": "ingenieroariel",
         "repo": "superconfigure",
-        "rev": "a23fd2aee34a13002348b4a46674f7be05e2f492",
+        "rev": "8308ff2e4a352e59a43a3ae624723c8f0abbb5fa",
         "type": "github"
       },
       "original": {
