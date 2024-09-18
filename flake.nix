@@ -113,9 +113,8 @@ export COSMOCC:=$(COSMO)/cosmocc
 export COSMOS_X86_64:=$(BASELOC)/cosmos/x86_64
 export COSMOS_AARCH64:=$(BASELOC)/cosmos/aarch64
 export RESULTS:=$(BASELOC)/results
-export ZIPCOPY:=$(COSMO)/o/tool/build/zipcopy
+export ZIPCOPY:=$(COSMO)/bin/zipcopy
 export APELINK:=$(COSMO)/bin/apelink
-export PKG_CONFIG_PATH_FOR_TARGET:=$(PKG_CONFIG_PATH_FOR_TARGET):$(COSMOS_AARCH64)/share/pkgconfig:$(COSMOS_AARCH64)/lib/pkgconfig:$(COSMOS_X86_64)/lib/pkgconfig:$(COSMOS_X86_64)/share/pkgconfig
 # basic functions
 include config/common.mk
 include config/functions.mk
